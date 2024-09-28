@@ -27,7 +27,7 @@ To install the **dae_validator_for_archivematica** script, follow these steps:
 - Fill in the following fields:
     - **Purpose**: Select **Validation**.
     - **The related format**: Select **Model: COLLADA Digital Asset Exchange (DAE): COLLADA DAE (fmt/1209)**.
-    - **Command**: Select **Validate using dae_validator script**.
+    - **Command**: Select **Validate using dae_validator**.
 - Click **Save**.
 
 ## Dependencies
