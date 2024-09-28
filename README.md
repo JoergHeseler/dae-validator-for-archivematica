@@ -6,6 +6,10 @@
 
 [Archivematica 1.13.2](https://github.com/artefactual/archivematica/releases/tag/v1.13.2) was used to analyze, design, develop and test this script.
 
+## Background
+
+As part of the [NFDI4Culture](https://nfdi4culture.de/) initiative, efforts are underway to enhance the capabilities of open-source digital preservation software like Archivematica to identify, validate and preserve 3D file formats. This repository provides the **dae_validator_for_archivematica** script to enable DAE file validation in Archivematica, which is not supported by default in version 1.13.2, enhancing its 3D content preservation capabilities.
+
 ## Related projects
 
 - [gltf_validator_connector_for_archivematica](https://github.com/JoergHeseler/gltf_validator_connector_for_archivematica)
