@@ -2,6 +2,49 @@
 
 **dae_validator_for_archivematica** is a script that enables [Archivematica](https://www.archivematica.org/) to validate DAE files.
 
+## Installation
+
+To install the **dae_validator_for_archivematica** script, follow these steps:
+
+### 1. Download the official DAE schemas 
+
+- Create a folder `/usr/share/schemes` and a subfolder `/usr/share/schemes/dae`.
+- Download all schemas from the official [DAE website](https://www.khronos.org/api/collada) and put them in the `/usr/share/schemes/dae/` folder.
+
+### 2. Create a new validation command
+- In the Archivematica frontend, navigate to **Preservation planning** > **Validation** > **Commands** > **Create new command** or go directly to [this link](http://10.10.10.20/fpr/fpcommand/create/).
+- Fill in the following fields:
+    - **The related tool**: Select **Archivematica script**.
+    - **Description**: Enter `Validate using dae_validator`.
+    - **Script**: Paste the entire content of the **gltf_validator_connector.py** file.
+    - **Script type**: Select **Python script**.
+    - **Command usage**: Select **Validation**.
+- Click **Save**.
+
+### 4. Create a new validation rule for ASCII based glTF 1.0
+- In the Archivematica frontend, navigate to **Preservation planning** > **Validation** > **Rules** > **Create new rule** or go directly to [this link](http://10.10.10.20/fpr/fprule/create/).
+- Fill in the following fields:
+    - **Purpose**: Select **Validation**.
+    - **The related format**: Select **Model: GL Transmission Format (Text): GLTF 1.0 (fmt/1314)**.
+    - **Command**: Select **Validate using gltf_validator**.
+- Click **Save**.
+
+### 5. Create a new validation rule for ASCII based glTF 2.0
+- In the Archivematica frontend, navigate to **Preservation planning** > **Validation** > **Rules** > **Create new rule** or go directly to [this link](http://10.10.10.20/fpr/fprule/create/).
+- Fill in the following fields:
+    - **Purpose**: Select **Validation**.
+    - **The related format**: Select **Model: GL Transmission Format (Text): GLTF 2.0 (fmt/1315)**.
+    - **Command**: Select **Validate using gltf_validator**.
+- Click **Save**.
+
+### 6. Create a new validation rule for binary glTF files
+- In the Archivematica frontend, navigate to **Preservation planning** > **Validation** > **Rules** > **Create new rule** or go directly to [this link](http://10.10.10.20/fpr/fprule/create/).
+- Fill in the following fields:
+    - **Purpose**: Select **Validation**.
+    - **The related format**: Select **Model: GL Transmission Format (Binary): GLTF (Binary) (fmt/1316)**.
+    - **Command**: Select **Validate using gltf_validator**.
+- Click **Save**.
+
 ## Dependencies
 
 [Archivematica 1.13.2](https://github.com/artefactual/archivematica/releases/tag/v1.13.2) was used to analyze, design, develop and test this script.
