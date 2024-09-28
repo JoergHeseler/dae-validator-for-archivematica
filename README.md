@@ -16,33 +16,17 @@ To install the **dae_validator_for_archivematica** script, follow these steps:
 - Fill in the following fields:
     - **The related tool**: Select **Archivematica script**.
     - **Description**: Enter `Validate using dae_validator`.
-    - **Script**: Paste the entire content of the **gltf_validator_connector.py** file.
+    - **Script**: Paste the entire content of the **dae_validator.py** file.
     - **Script type**: Select **Python script**.
     - **Command usage**: Select **Validation**.
 - Click **Save**.
 
-### 4. Create a new validation rule for ASCII based glTF 1.0
+### 3. Create a new validation rule for ASCII based glTF 1.0
 - In the Archivematica frontend, navigate to **Preservation planning** > **Validation** > **Rules** > **Create new rule** or go directly to [this link](http://10.10.10.20/fpr/fprule/create/).
 - Fill in the following fields:
     - **Purpose**: Select **Validation**.
-    - **The related format**: Select **Model: GL Transmission Format (Text): GLTF 1.0 (fmt/1314)**.
-    - **Command**: Select **Validate using gltf_validator**.
-- Click **Save**.
-
-### 5. Create a new validation rule for ASCII based glTF 2.0
-- In the Archivematica frontend, navigate to **Preservation planning** > **Validation** > **Rules** > **Create new rule** or go directly to [this link](http://10.10.10.20/fpr/fprule/create/).
-- Fill in the following fields:
-    - **Purpose**: Select **Validation**.
-    - **The related format**: Select **Model: GL Transmission Format (Text): GLTF 2.0 (fmt/1315)**.
-    - **Command**: Select **Validate using gltf_validator**.
-- Click **Save**.
-
-### 6. Create a new validation rule for binary glTF files
-- In the Archivematica frontend, navigate to **Preservation planning** > **Validation** > **Rules** > **Create new rule** or go directly to [this link](http://10.10.10.20/fpr/fprule/create/).
-- Fill in the following fields:
-    - **Purpose**: Select **Validation**.
-    - **The related format**: Select **Model: GL Transmission Format (Binary): GLTF (Binary) (fmt/1316)**.
-    - **Command**: Select **Validate using gltf_validator**.
+    - **The related format**: Select **Model: COLLADA Digital Asset Exchange (DAE): COLLADA DAE (fmt/1209)**.
+    - **Command**: Select **Validate using dae_validator script**.
 - Click **Save**.
 
 ## Dependencies
