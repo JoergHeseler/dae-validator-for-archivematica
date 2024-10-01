@@ -34,6 +34,14 @@ To install the **dae_validator_for_archivematica** script, follow these steps:
 
 [Archivematica 1.13.2](https://github.com/artefactual/archivematica/releases/tag/v1.13.2), the [DAE schema 1.4.1](https://www.khronos.org/files/collada_schema_1_4_1.xsd) and [DAE schema 1.5.0](https://www.khronos.org/files/collada_schema_1_5) were used to analyze, design, develop and test this script.
 
+## Test
+
+To test this validator you can use the sample DAE files located in the [`test`](./test/) folder.
+
+You can view the error codes and detailed validation results in the Archivmatica frontend after starting a transfer by expanding the `▸ Microservice: Validation` section and clicking on the gear icon of `Job: Validate formats`.
+
+Files with no errors end with the filename `_valid` and should pass validation with this script (i. e. return error code **0**) when validated with this script. However, all other files contain errors and should fail validation (i. e. return error code **1**).
+
 ## Background
 
 As part of the [NFDI4Culture](https://nfdi4culture.de/) initiative, efforts are underway to enhance the capabilities of open-source digital preservation software like Archivematica to identify, validate and preserve 3D file formats. This repository provides the **dae_validator_for_archivematica** script to enable COLLADA Digital Asset Exchange (DAE) file validation in Archivematica, which is not supported by default in version 1.13.2, enhancing its 3D content preservation capabilities.
