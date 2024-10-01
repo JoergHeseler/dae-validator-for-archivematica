@@ -9,8 +9,7 @@ To install the **dae_validator_for_archivematica** script, follow these steps:
 ### 1. Download the official DAE schemas 
 
 - Create a folder `/usr/share/schemes` and a subfolder `/usr/share/schemes/dae`.
-- Download the [DAE schema 1.4.1](https://www.khronos.org/files/collada_schema_1_4_1.xsd) and [DAE schema 1.5.0](https://www.khronos.org/files/collada_schema_1_5) from the official [DAE website](https://www.khronos.org/api/collada) and put them in the `/usr/share/schemes/dae/` folder.
-- Rename the `collada_schema_1_5` to `collada_schema_1_5.xsd`.
+- Download the [DAE schema 1.4.1](https://www.khronos.org/files/collada_schema_1_4_1.xsd) and [DAE schema 1.5.0](https://www.khronos.org/files/collada_schema_1_5_0.xsd) from the official [DAE website](https://www.khronos.org/api/collada) and put them in the `/usr/share/schemes/dae/` folder.
 
 ### 2. Create a new validation command
 - In the Archivematica frontend, navigate to **Preservation planning** > **Validation** > **Commands** > **Create new command** or go directly to [this link](http://10.10.10.20/fpr/fpcommand/create/).
