@@ -1,4 +1,4 @@
-# Title: dae_validator
+# Title: dae-validator
 # Version: 1.0.0
 # Publisher: NFDI4Culture
 # Publication date: 2024, January 5th
