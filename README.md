@@ -31,7 +31,7 @@ To install the **dae-validator-for-archivematica** script, follow these steps:
 
 ## Test
 
-To test this validator, you can use the sample DAE files located in [`here`](https://github.com/JoergHeseler/3d-sample-files-for-digital-preservation-testing/tree/main/dae).
+To test this validator, you can use the sample DAE files located [`here`](https://github.com/JoergHeseler/3d-sample-files-for-digital-preservation-testing/tree/main/dae).
 
 You can view the error codes and detailed validation results in the Archivmatica frontend after starting a transfer by expanding the `▸ Microservice: Validation` section and clicking on the gear icon of `Job: Validate formats`.
 
