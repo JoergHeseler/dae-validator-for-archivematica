@@ -1,4 +1,4 @@
-# dae-validator-for-archivematica
+# DAE Validator for Archivematica
 
 **dae-validator-for-archivematica** is a script that enables [Archivematica](https://www.archivematica.org/) to validate COLLADA Digital Asset Exchange (DAE) files.
 
