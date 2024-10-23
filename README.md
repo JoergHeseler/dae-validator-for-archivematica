@@ -17,9 +17,10 @@ To install this script, follow these steps:
 - Fill in the following fields:
   - **The related tool**: Select **Archivematica script**.
   - **Description**: Enter `Validate using dae-validator`.
-  - **Script**: Paste the entire content of the [**dae-validator.py**](./src/dae-validator.py) file.
+  - **Command**: Paste the entire content of the [**dae-validator.py**](./src/dae-validator.py) file.
   - **Script type**: Select **Python script**.
   - **Command usage**: Select **Validation**.
+  - Leave all other fields and comboboxes untouched.
 - Click **Save**.
 
 ### 3. Create a new validation rule for ASCII based glTF 1.0
