@@ -20,7 +20,7 @@ To install this script, follow these steps:
   - **Command**: Paste the entire content of the [**dae-validator.py**](./src/dae-validator.py) file.
   - **Script type**: Select **Python script**.
   - **Command usage**: Select **Validation**.
-  - Leave all other fields and comboboxes untouched.
+  - Leave all other input fields and combo boxes untouched.
 - Click **Save**.
 
 ### 3. Create a new validation rule for ASCII based glTF 1.0
