@@ -51,8 +51,10 @@ As part of the [NFDI4Culture](https://nfdi4culture.de/) initiative, efforts are 
 ## Related projects
 
 - [3D Sample Files for Digital Preservation Testing](https://github.com/JoergHeseler/3d-sample-files-for-digital-preservation-testing)
+- [glTF Metadata Extractor for Archivematica](https://github.com/JoergHeseler/gltf-metadata-extractor-for-archivematica)
 - [glTF Validator for Archivematica](https://github.com/JoergHeseler/gltf-validator-for-archivematica)
 - [Siegfried Falls Back on Fido Identifier for Archivematica](https://github.com/JoergHeseler/siegfried-falls-back-on-fido-identifier-for-archivematica)
+- [STL Metadata Extractor for Archivematica](https://github.com/JoergHeseler/stl-metadata-extractor-for-archivematica)
 - [STL Validator for Archivematica](https://github.com/JoergHeseler/stl-validator-for-archivematica)
 - [X3D Validator for Archivematica](https://github.com/JoergHeseler/x3d-validator-for-archivematica)
 
