@@ -25,6 +25,12 @@ def format_event_outcome_detail_note(format, version, result):
 
     return note
 
+def get_schemes_path_from_arguments():
+    for arg in sys.argv:
+        if arg.lower().startswith("--schemes-path="):
+            return arg.split("=", 1)[1].rstrip('/\\')
+    return '/usr/share/schemes/dae'
+
 def main(target):
     try:
         try:
@@ -34,13 +40,13 @@ def main(target):
         target_xml_root = target_xml_tree.getroot()
         format = 'DAE'
         version = target_xml_root.attrib.get('version')
-        xsd_path = '/usr/share/schemes/dae/'
+        xsd_path = get_schemes_path_from_arguments()
         # xsd_path = './schemes/dae/'
         # according to the official specification only 1.5.0 and not 1.5 is valid here
         if version == '1.5.0':
-            xsd_path += 'collada_schema_1_5_0.xsd'
+            xsd_path += '/collada_schema_1_5_0.xsd'
         else:
-            xsd_path += 'collada_schema_1_4_1.xsd'
+            xsd_path += '/collada_schema_1_4_1.xsd'
         # try:
         xsd_schema = etree.XMLSchema(etree.parse(xsd_path))
         # except etree.XMLSchemaParseError as e:
