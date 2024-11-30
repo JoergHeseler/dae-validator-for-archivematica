@@ -44,7 +44,7 @@ Files with no errors end with `valid` in their name and should pass validation w
 
 ### In the command line prompt:
 
-You can use the validator at the command line prompt by typing `python dae-validator.py <dae file path to validate> --schemes-path=<path to the dae schemes>`.
+You can use the validator at the command line prompt by typing `python dae-validator.py <DAE file to validate> --schemes-path=<path to DAE schemes>`.
 
 ## Dependencies
 
