@@ -38,7 +38,7 @@ def main(target):
         except etree.XMLSyntaxError as e:
             raise DAEValidatorException(e)
         target_xml_root = target_xml_tree.getroot()
-        format = 'DAE'
+        format = 'DAE (COLLADA Digital Asset Exchange)'
         version = target_xml_root.attrib.get('version')
         xsd_path = get_schemes_path_from_arguments()
         # xsd_path = './schemes/dae/'
