@@ -48,9 +48,11 @@ def main(target):
             xsd_path += '/collada_schema_1_5_0.xsd'
         else:
             xsd_path += '/collada_schema_1_4_1.xsd'
-        # try:
-        xsd_schema = etree.XMLSchema(etree.parse(xsd_path))
-        # except etree.XMLSchemaParseError as e:
+        try:
+            xsd_schema = etree.XMLSchema(etree.parse(xsd_path))
+        except OSError:
+            raise Exception("DAE schemes path not found. Use --schemes-path= to specify its path.")
+#        except etree.XMLSchemaParseError as e:
             # raise DAEValidatorException(e)
         validation_successful = xsd_schema.validate(target_xml_tree)
         if not validation_successful:
@@ -81,6 +83,9 @@ def main(target):
             ),
             file=sys.stderr,
         )
+        return ERROR_CODE
+    except Exception as e:
+        print(e, file=sys.stderr)
         return ERROR_CODE
 
 if __name__ == '__main__':
