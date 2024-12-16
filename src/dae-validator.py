@@ -13,6 +13,7 @@ from lxml import etree
 
 SUCCESS_CODE = 0
 ERROR_CODE = 1
+DAE_SCHEMES_PATH = '/usr/share/schemes/dae' 
 
 class DAEValidatorException(Exception):
     pass
@@ -27,12 +28,13 @@ def format_event_outcome_detail_note(format, version, result):
     return note
 
 def get_schemes_path_from_arguments():
+    global DAE_SCHEMES_PATH
     for arg in sys.argv:
         if arg.lower().startswith("--schemes-path="):
             return arg.split("=", 1)[1].rstrip('/\\')
-    return '/usr/share/schemes/dae'
+    return DAE_SCHEMES_PATH
 
-def main(target):
+def validate_dae_file(target):
     try:
         try:
             target_xml_tree = etree.parse(target, parser=etree.XMLParser(huge_tree=True))
@@ -89,5 +91,15 @@ def main(target):
         return ERROR_CODE
 
 if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print(f'DAE Validator, version 1.0.0')
+        print()
+        print(f'This script validates DAE files against schemas provided by https://www.khronos.org/api/collada.')
+        print()
+        print(f'Usage: python dae-validator.py <DAE file> [options]')
+        print()        
+        print(f'--schemes-path=<path to DAE schemes>    path to DAE schemes, default={DAE_SCHEMES_PATH}')
+        sys.exit(0)
+
     target = sys.argv[1]
-    sys.exit(main(target))
+    sys.exit(validate_dae_file(target))
