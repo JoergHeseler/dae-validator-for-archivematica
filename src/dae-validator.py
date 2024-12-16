@@ -13,7 +13,7 @@ from lxml import etree
 
 SUCCESS_CODE = 0
 ERROR_CODE = 1
-DAE_SCHEMES_PATH = '/usr/share/schemes/dae' 
+DEFAULT_DAE_SCHEMES_PATH = '/usr/share/schemes/dae' 
 
 class DAEValidatorException(Exception):
     pass
@@ -28,11 +28,11 @@ def format_event_outcome_detail_note(format, version, result):
     return note
 
 def get_schemes_path_from_arguments():
-    global DAE_SCHEMES_PATH
+    global DEFAULT_DAE_SCHEMES_PATH
     for arg in sys.argv:
         if arg.lower().startswith("--schemes-path="):
             return arg.split("=", 1)[1].rstrip('/\\')
-    return DAE_SCHEMES_PATH
+    return DEFAULT_DAE_SCHEMES_PATH
 
 def validate_dae_file(target):
     try:
@@ -98,7 +98,7 @@ if __name__ == '__main__':
         print()
         print(f'Usage: python dae-validator.py <DAE file> [options]')
         print()        
-        print(f'--schemes-path=<path to DAE schemes>    path to DAE schemes, default={DAE_SCHEMES_PATH}')
+        print(f'--schemes-path=<path to DAE schemes>    path to DAE schemes, default={DEFAULT_DAE_SCHEMES_PATH}')
         sys.exit(0)
 
     target = sys.argv[1]
