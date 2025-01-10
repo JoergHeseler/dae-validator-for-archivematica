@@ -43,7 +43,6 @@ def validate_dae_file(target):
         format = 'DAE (COLLADA Digital Asset Exchange)'
         version = target_xml_root.attrib.get('version')
         xsd_path = get_schemes_path_from_arguments()
-        # xsd_path = './schemes/dae/'
         # according to the official specification only 1.5.0 and not 1.5 is valid here
         if version == '1.5.0':
             xsd_path += '/collada_schema_1_5_0.xsd'
